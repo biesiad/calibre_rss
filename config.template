@@ -1,0 +1,5 @@
+#!/bin/bash
+
+GMAIL_USERNAME=my_gmail_username
+GMAIL_PASSWORD=my_gmail_password
+KINDLE_USERNAME=my_kindle_username
