@@ -3,9 +3,9 @@
 source ./user_conf.sh
 
 echo $GMAIL_USERNAME
-# RECIPE_FILE=/Users/biesiad/Library/Preferences/calibre/custom_recipes/RSS_1000.recipe
-# MOBI_FILE=$TMPDIR/calibre.rss.mobi
-# 
-# ebook-convert $RECIPE_FILE $MOBI_FILE --title=RSS
-# calibre-smtp --attachment $MOBI_FILE --relay smtp.gmail.com --port 587 --username $GMAIL_USERNAME --password $GMAIL_PASSWORD --encryption-method TLS $GMAIL_USERNAME@gmail.com $KINDLE_USERNAME@free.kindle.com "RSS"
-# rm $MOBI_FILE
+RECIPE_FILE=/Users/biesiad/Library/Preferences/calibre/custom_recipes/RSS_1000.recipe
+MOBI_FILE=$TMPDIR/calibre.rss.mobi
+
+ebook-convert $RECIPE_FILE $MOBI_FILE --title=RSS
+calibre-smtp --attachment $MOBI_FILE --relay smtp.gmail.com --port 587 --username $GMAIL_USERNAME --password $GMAIL_PASSWORD --encryption-method TLS $GMAIL_USERNAME@gmail.com $KINDLE_USERNAME@free.kindle.com ""
+rm $MOBI_FILE
