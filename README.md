@@ -1,23 +1,16 @@
-### Calibre cron job
+### Calibre RSS job
+This script will send your calibre RSS source to kindle once every 24h.
+
 
 ## Configuration
-
 ```sh
 cp config.template config
 ```
-
 Update your user data in config file
 
-## Adding to crontab
+
+## Add script to launchd
 ```sh
-crontab -e
+ln -s [CALIBRE_RSS]/local.calibre.rss.plist ~/Library/LaunchAgents/local.calibre.rss.plist
+launchctl load ~/Library/LaunchAgents/local.calibre.rss.plist
 ```
-
-and add line
-
-```sh
-0   8,20   *   *   *   $HOME/calibre_cron/calibre.job 2>&1
-```
-
----
-_More info on:_ [crontab](http://ss64.com/osx/crontab.html)
