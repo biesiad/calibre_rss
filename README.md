@@ -1,4 +1,4 @@
-### Calibre RSS job
+# Calibre RSS job
 This script will send your calibre RSS source to kindle once every 24h.
 
 
