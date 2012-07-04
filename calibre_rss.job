@@ -1,0 +1,15 @@
+#!/bin/bash
+
+echo Started: `date` >> /Users/biesiad/Projects/calibre_rss/calibre_rss.log
+
+source /Users/biesiad/Projects/calibre_rss/config
+
+RECIPE_FILE=/Users/biesiad/Library/Preferences/calibre/custom_recipes/RSS_1000.recipe
+MOBI_FILE=$TMPDIR/calibre.rss.mobi
+CALIBRE_BIN=/Applications/calibre.app/Contents/MacOS
+
+$CALIBRE_BIN/ebook-convert $RECIPE_FILE $MOBI_FILE --title=RSS
+$CALIBRE_BIN/calibre-smtp --attachment $MOBI_FILE --relay smtp.gmail.com --port 587 --username $GMAIL_USERNAME --password $GMAIL_PASSWORD --encryption-method TLS $GMAIL_USERNAME@gmail.com $KINDLE_USERNAME@free.kindle.com ""
+rm $MOBI_FILE
+
+echo Finished: `date` >> /Users/biesiad/Projects/calibre_rss/calibre_rss.log
