@@ -9,7 +9,7 @@
         <string>/Users/biesiad/Projects/calibre_rss/calibre_rss.job</string>
 
         <key>StartInterval</key>
-        <integer>86400</integer>
+        <integer>28800</integer>
 
         <key>RunAtLoad</key>
         <true/>
